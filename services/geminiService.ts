@@ -2,7 +2,7 @@
 import { GoogleGenAI, Type, Modality } from "@google/genai";
 
 // Always use process.env.GEMINI_API_KEY exclusively for initialization as per guidelines
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 export const analyzeReportSymptoms = async (description: string, additionalData?: any) => {
   try {
